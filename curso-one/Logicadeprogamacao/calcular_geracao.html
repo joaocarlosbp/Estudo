@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculo</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+        }
+        var idadeMediaDeFilhos=28
+        var anoAtual=2023
+        var quantidadeDeGeracoes=((anoAtual-1500)/idadeMediaDeFilhos)
+        var quantidadeDeGeracoes2=(Math.round(quantidadeDeGeracoes))
+        
+        mostra("Desde o ano 1500 se passaram: "+quantidadeDeGeracoes2+" gerações. ");
+</script>
+</html>
