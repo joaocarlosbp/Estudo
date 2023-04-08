@@ -8,16 +8,27 @@ function mostra(frase){
     pulaLinha();
 }
 
-var numeroPensado = Math.round(Math.random() * 100);
+var numeroPensado = Math.round(Math.random() * 10);
+var tentativa=1;
 
-var chute= parseInt(prompt("digite seu chute: "));
+while(tentativa<=3){
+    
+    var chute= parseInt(prompt("digite seu chute: "));
 
-if(chute==numeroPensado){
-    mostra("Voce acertou.")
+    if(chute==numeroPensado) {
+        mostra("Voce ACERTOU!");
+        break;
+
+    } else{
+
+        mostra("Voce ERROU!");
+    
     }
-else(   mostra("Voce errou. "));{
+    
+    tentativa++;    
 
-         mostra("O numero pensado foi: " + numeroPensado)
-}
-  
+    }
+
+    mostra("Fim");
+
 </script>
