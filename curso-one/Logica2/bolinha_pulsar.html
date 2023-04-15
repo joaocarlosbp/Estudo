@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<canvas width="600" height="400"></canvas>
+<br>
+<input type="button" value="Botão de Atualizar" onClick="window.location.reload()">
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(0);
+        max = Math.floor(3);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+        var raio=19;
+        var incremento=1;
+        var cores=['red','blue','green','black'];
+        var i=getRandomIntInclusive();
+    function atualizaTela(){
+
+        limpaTela();
+        
+        if (raio > 30) {
+            incremento=-1;
+        }else if(raio<20){
+            incremento=1
+        }
+        desenhaCirculo(100,50,raio,cores[i]);
+        raio = raio + incremento;
+        
+       
+
+    }
+    
+
+    setInterval(atualizaTela,30)
+</script>
